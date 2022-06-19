@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "b40fd055-a69a-4959-8cbf-c55008fb201f",
+		"name": "TO-DO with Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1070284"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sam@samu.el",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "s@m@3L",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Register - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Sam",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "sam@samu.el",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "s@m@3L",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-vwDKFqDgUxjTIZbgf+Bm1yuPe18\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jun 2022 09:29:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"status\": 201\n    },\n    \"duration\": 133\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}

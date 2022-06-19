@@ -3,7 +3,7 @@ import {
   USER_SERVICE_HOST,
   USER_SERVICE_NAME,
   USER_SERVICE_PORT,
-} from './../constants/services';
+} from '@constants/user-service.constants';
 
 export const UserClient: ClientProviderOptions = {
   name: USER_SERVICE_NAME,

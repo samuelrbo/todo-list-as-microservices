@@ -51,11 +51,9 @@ export class UserService {
   }: UserCredentialRequestDto): Promise<UserCredentialResponseDto> {
     const user: User = await this.findByEmail(email);
 
-    if (!user) {
+    if (!user || !EncryptHelper.isValid(password, user.password)) {
       return { status: HttpStatus.UNAUTHORIZED, error: 'Unauthorized' };
     }
-
-    // TODO Check user password
 
     user.password = null;
 

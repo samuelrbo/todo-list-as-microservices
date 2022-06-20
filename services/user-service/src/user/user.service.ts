@@ -6,7 +6,6 @@ import { UserRegisterResponseDto } from './dto/user-register-response.dto';
 import { UserRegisterRequestDto } from './dto/user-register-request.dto';
 import { User } from './user.entity';
 import { UserCredentialRequestDto } from './dto/user-credential-request.dto';
-import { error } from 'console';
 import { UserCredentialResponseDto } from './dto/user-credential-response.dto';
 
 @Injectable()

@@ -1,12 +1,12 @@
-import { EncryptHelper } from './helpers/encrypt.helper';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { UserRegisterResponseDto } from './dto/user-register-response.dto';
-import { UserRegisterRequestDto } from './dto/user-register-request.dto';
-import { User } from './user.entity';
 import { UserCredentialRequestDto } from './dto/user-credential-request.dto';
 import { UserCredentialResponseDto } from './dto/user-credential-response.dto';
+import { UserRegisterRequestDto } from './dto/user-register-request.dto';
+import { UserRegisterResponseDto } from './dto/user-register-response.dto';
+import { EncryptHelper } from './helpers/encrypt.helper';
+import { User } from './user.entity';
 
 @Injectable()
 export class UserService {
@@ -37,11 +37,11 @@ export class UserService {
   }
 
   public async findById(id: number): Promise<User> {
-    return this.userRepository.findOne({ where: { id } });
+    return await this.userRepository.findOne({ where: { id } });
   }
 
   public async findByEmail(email: string): Promise<User> {
-    return this.userRepository.findOne({ where: { email } });
+    return await this.userRepository.findOne({ where: { email } });
   }
 
   public async checkCredentials({

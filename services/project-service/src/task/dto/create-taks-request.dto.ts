@@ -6,7 +6,7 @@ import {
   IsString,
 } from 'class-validator';
 
-export class CreateTastkDto {
+export class CreateTastkRequestDto {
   @IsString()
   @IsNotEmpty()
   title: string;
@@ -22,4 +22,8 @@ export class CreateTastkDto {
   @IsNumber()
   @IsNotEmpty()
   projectId: number;
+
+  @IsNumber()
+  @IsNotEmpty()
+  uid: number;
 }

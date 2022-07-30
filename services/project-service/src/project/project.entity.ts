@@ -16,6 +16,9 @@ export class Project {
   @Column()
   title!: string;
 
+  @Column()
+  uid!: number;
+
   @CreateDateColumn({
     type: 'datetime',
     default: () => 'NOW(6)',

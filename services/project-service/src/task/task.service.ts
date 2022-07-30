@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateTastkDto } from './dto/create-taks.dto';
+import { CreateTastkRequestDto } from './dto/create-taks-request.dto';
 import { Task } from './task.entity';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class TaskService {
     private readonly taskRepository: Repository<Task>,
   ) {}
 
-  public async create(createTask: CreateTastkDto): Promise<Task> {
+  public async create(createTask: CreateTastkRequestDto): Promise<Task> {
     return await this.taskRepository.save(createTask);
   }
 }

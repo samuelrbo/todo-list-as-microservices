@@ -17,15 +17,15 @@ export class Project {
   title!: string;
 
   @CreateDateColumn({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP(6)',
+    type: 'datetime',
+    default: () => 'NOW(6)',
   })
   createdAt!: Date;
 
   @UpdateDateColumn({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP(6)',
-    onUpdate: 'CURRENT_TIMESTAMP(6)',
+    type: 'datetime',
+    default: () => 'NOW()',
+    onUpdate: 'NOW()',
   })
   updatedAt!: Date;
 

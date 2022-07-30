@@ -23,15 +23,15 @@ export class Task {
   done!: boolean;
 
   @CreateDateColumn({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP(6)',
+    type: 'datetime',
+    default: () => 'NOW()',
   })
   createdAt!: Date;
 
   @UpdateDateColumn({
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP(6)',
-    onUpdate: 'CURRENT_TIMESTAMP(6)',
+    type: 'datetime',
+    default: () => 'NOW()',
+    onUpdate: 'NOW()',
   })
   updatedAt!: Date;
 

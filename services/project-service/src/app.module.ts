@@ -7,7 +7,7 @@ import { TaskModule } from './task/task.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'db/user.sqlite',
+      database: 'db/project.sqlite',
       entities: ['dist/**/*.entity.{ts,js}'],
       synchronize: true,
     }),
